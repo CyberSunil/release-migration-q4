@@ -26,13 +26,10 @@ repository. In `sunilbugcrowd/repo2-codex`:
        runs-on: ubuntu-latest
        steps:
          - uses: actions/checkout@v4
-         - uses: actions/setup-node@v4
+         - name: Verify the mirrored release policy
+           uses: CyberSunil/release-verify-action@v1
            with:
-             node-version: 20
-         - name: Install release verification tooling
-           run: npm install github:CyberSunil/release-verify-tools
-         - name: Run release verification
-           run: npx release-verify
+             policy-path: .release/release-policy.md
    ```
 
 2. Add the file `.release/release-policy.md` in `sunilbugcrowd/repo2-codex`
